@@ -1,0 +1,82 @@
+{
+  "frames" :[
+    {
+    "frameNumber" : 0,
+    "scene" : {
+      "camera" : {
+        "target" : [0, 2.5, 0],
+        "eye" : [0, 5.5, -30],
+        "worldUp" : [0, 1, 0],
+        "fov" : 19.5,
+        "width" : 400,
+        "height": 400
+      },
+      "primitives" : [
+		{
+          "shape" : "Sphere",
+          "name" : "ice cube",
+          "material" : "transmissiveMaterial",
+          "transform" : {
+            "translate" : [-3, 1, 3],
+            "rotate" : [0,0,0],
+            "scale" : [1.3, 1.3, 1.3]
+          }
+        },
+		{
+          "shape" : "Cube",
+          "name" : "ice cube",
+          "material" : "transmissiveMaterial",
+          "transform" : {
+            "translate" : [2, 3, -2],
+            "rotate" : [0,0,0],
+            "scale" : [3, 3, 3]
+          }
+        },
+		{
+          "shape" : "Sphere",
+          "name" : "ice cube",
+          "material" : "chromeMirror",
+          "transform" : {
+            "translate" : [2, 1, 3],
+            "rotate" : [0,0,0],
+            "scale" : [1.5, 1.5, 1.5]
+          }
+        },
+		{
+          "shape" : "Cube",
+          "name" : "ice cube",
+          "material" : "chromeMirror",
+          "transform" : {
+            "translate" : [-3, 2, -2],
+            "rotate" : [0,0,0],
+            "scale" : [2.5, 2.5, 2.5]
+          }
+        }
+      ],
+	  "lights" : [
+        
+      ],
+      "materials" : [
+        {
+          "type" : "MatteMaterial",
+          "name" : "matteBlack",
+            "Kd" : [0.1, 0.1, 0.1],
+          "sigma": 0
+        },
+        {
+          "type": "GlassMaterial",
+          "name": "transmissiveMaterial",
+          "Kt": [0.9, 0.9, 1],
+          "Kr": [1, 1, 0.2],
+          "eta": 1.8
+        },
+		{
+          "type": "MirrorMaterial",
+          "name": "chromeMirror",
+          "Kr": [1, 1, 1]
+        }
+      ]
+    }
+  }
+]
+}

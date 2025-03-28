@@ -1,0 +1,102 @@
+{
+  "frames" :[
+    {
+    "frameNumber" : 0,
+    "scene" : {
+      "camera" : {
+        "target" : [0, 2.5, 0],
+        "eye" : [0, 5.5, -30],
+        "worldUp" : [0, 1, 0],
+        "fov" : 19.5,
+        "width" : 400,
+        "height": 400
+      },
+      "primitives" : [
+        {
+          "shape" : "SquarePlane",
+          "name" : "Floor",
+          "material" : "chromeMirror",
+          "transform" : {
+            "translate" : [0, -2.5, 0],
+            "rotate" : [-90, 0, 0],
+            "scale" : [20, 20, 1]
+          }
+        },
+        {
+          "shape" : "Sphere",
+          "name" : "pink sphere",
+          "material" : "mattePink",
+          "transform" : {
+            "translate" : [0, 4, 0],
+            "rotate" : [0,0,0],
+            "scale" : [3, 3, 3]
+          }
+        },
+		{
+          "shape" : "Sphere",
+          "name" : "white oval",
+          "material" : "matteWhite",
+          "transform" : {
+            "translate" : [2, 8, 0],
+            "rotate" : [0,50,85],
+            "scale" : [2, 2, 3]
+          }
+        },
+		{
+          "shape" : "Cube",
+          "name" : "ice cube",
+          "material" : "transmissiveMaterial",
+          "transform" : {
+            "translate" : [0, 6, 3],
+            "rotate" : [0,0,0],
+            "scale" : [3, 3, 3]
+          }
+        }
+      ],
+	  "lights" : [
+        {
+          "shape" : "SquarePlane",
+          "name" : "Light Source",
+          "type" : "DiffuseAreaLight",
+          "lightColor" : [100,40,40],
+          "intensity" : .3,
+          "transform" : {
+            "translate" : [0,-2.49,0],
+            "rotate" : [270,0,0],
+            "scale" : [6, 6, 1]
+          },
+          "isDelta" : false,
+          "twoSided" : true
+        }
+      ],
+      "materials" : [
+        {
+          "type" : "MatteMaterial",
+          "name" : "matteWhite",
+            "Kd" : [0.85, 0.81, 0.78],
+          "sigma": 0
+        },
+        {
+          "type": "GlassMaterial",
+          "name": "transmissiveMaterial",
+          "Kt": [0.9, 0.9, 1],
+          "Kr": [1, 1, 0.2],
+          "eta": 1.2
+        },
+		{
+          "type": "MirrorMaterial",
+          "name": "chromeMirror",
+          "Kr": [1, 1, 1],
+          "roughness": 0.02
+        },
+		{
+          "type" : "MatteMaterial",
+          "name" : "mattePink",
+            "Kd" : [0.9, 0.1, 0.3],
+          "sigma": 0
+        }
+      ]
+    }
+  }
+]
+}
